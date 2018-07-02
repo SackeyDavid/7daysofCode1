@@ -1,0 +1,102 @@
+
+    // for live exchange rates
+        let selectCountries = [USD, EUR, GBP, NGN, CAD, CNY, ZAR, AUD, KES, RUB, EGP, JPY];
+
+        let selectNation = $('#country').val();
+        let selectQuery = '';
+        let compares = [];
+
+        for(n in selectCountries )
+        {
+            selectQuery = selectNation + '_' + `${selectCountries[n]}`;
+
+            fetch('https://free.currencyconverterapi.com/api/v5/convert?q='
+                            + selectQuery + '&compact=y').then( function(response) {
+                            response.json().then(function(data) {
+
+                
+                // let jsonObj = JSON.parse(dat;
+
+                let obj = data[query];
+                let val = '';
+
+                
+
+                for (d in obj)
+                {
+                   val = `${obj[d]}`;
+                }
+
+
+                
+                if (val) {
+                let total = val * amount;
+                  //populate array with val
+                  compares.push(val);
+                  
+                  
+                  console.log(val);
+
+                }
+                else{
+                  console.log("Value not found for " + query);
+                }
+
+                
+                
+
+                 });
+              });
+
+        }
+
+                  
+
+                    // declare 12 contents here with empty values;
+                    // get array as parameter a
+                    // loop through array populating contents
+
+                  if (!document.getElementsByTagName) alert('cannot add live exchange rates'); return;
+                   tabBody=document.getElementsByTagName("tbody").item(0);
+                   // for each outer array row
+                    for (var i = 0 ; i < compares.length; i++) {
+                       var tr = document.createElement("tr");
+
+                       // for each inner array cell
+                       // create td then text, append
+                       for (var j = 0; j < compares[i].length; j++) {
+                         var td = document.createElement("td");
+                         var txt = document.createTextNode(values[i][j]);
+                         td.appendChild(txt);
+                         tr.appendChild(td);
+                       }
+
+                       // append row to table
+                       // IE7 requires append row to tbody, append tbody to table
+                       tbody.appendChild(tr);
+                       mixed.appendChild(tbody);
+                     }
+
+                   row=document.createElement("tr");
+                   cell1 = document.createElement("td");
+                   cell2 = document.createElement("td");
+                   cell3 = document.createElement("td");
+                   cell4 = document.createElement("td");
+                   cell5 = document.createElement("td");
+                   cell6 = document.createElement("td");
+                   cell7 = document.createElement("td");
+                   cell8 = document.createElement("td");
+                   cell9 = document.createElement("td");
+                   cell10 = document.createElement("td");
+                   cell11 = document.createElement("td");
+                   cell12 = document.createElement("td");
+                   textnode1=document.createTextNode(content);
+                   textnode2=document.createTextNode(morecontent);
+                   cell1.appendChild(textnode1);
+                   cell2.appendChild(textnode2);
+                   row.appendChild(cell1);
+                   row.appendChild(cell2);
+                   tabBody.appendChild(row);
+                   
+                 
+     

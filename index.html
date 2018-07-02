@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="../../../../favicon.ico"> -->
+
+    <title>CC</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="jumbotron.css" rel="stylesheet"> -->
+    <style type="text/css">
+        .table td {border-top-style: none;}
+        .table th {border: none;}
+        .table thead th {border: none;}
+        .table img {height: 50px; width: 50px;}
+
+        @media (min-width: 600px)
+        {
+            #results-body {min-height: 27vh;}
+        }
+        @media (max-width: 600px)
+        {
+            #results-body {min-height: 47vh;}
+        }
+
+        
+         
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Currency Converter</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div> -->
+    </nav>
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="container jumbotron" >
+        
+            <br><br>
+          <ul class="list-inline">
+            <li>Live Exchange Rates</li>
+          <li>
+            <select class="form-control" id="country">
+            <option value="GHS">GHS Ghana cedis</option>
+            </select>
+            </li>
+         </ul>
+
+         <div class="surround">
+            <div class="surround-container">
+          <table class="table borderless">
+          <thead>
+          <tr>
+            <th colspan="1"></th>
+            <td><img src="images/united-states.png"><center>USD</center></td>
+            <td><img src="images/european-union.png"><center>EUR</center></td>
+            <td><img src="images/united-kingdom.png"><center>GBP</center></td>
+            <td><img src="images/nigeria.png"><center>NGN</center></td>
+            <td><img src="images/canada.png"><center>CAD</center></td>
+            <td><img src="images/china.png"><center>CNY</center></td>
+            <td><img src="images/south-africa.png"><center>ZAR</center></td>
+            <td><img src="images/australia.png"><center>AUD</center></td>
+            <td><img src="images/kenya.png"><center>KES</center></td>
+            <td><img src="images/russia (1).png"><center>RUB</center></td>
+            <td><img src="images/egypt.png"><center>EGP</center></td>
+            <td><img src="images/japan.png"><center>JPY</center></td>
+          </tr>
+        </thead>
+
+          <tbody>
+
+            <tr>
+            <th>1 GHS</th>
+            <td>0.4509</td>
+            <td>2.3452</td>
+            <td>3.2423</td>
+            <td>2.4525</td>
+            <td>3.3244</td>
+            <td>0.4509</td>
+            <td>2.3452</td>
+            <td>3.2423</td>
+            <td>2.4525</td>
+            <td>0.4509</td>
+            <td>2.3452</td>
+            <td>3.2423</td>
+          </tr>
+          
+         
+          <tr>
+            <td>inverse:</td>
+            <td>0.4509</td>
+            <td>2.3452</td>
+            <td>3.2423</td>
+            <td>2.4525</td>
+            <td>2.4525</td>
+            <td>3.0934</td>
+            <td>0.4509</td>
+            <td>2.3452</td>
+            <td>3.2423</td>
+            <td>0.4509</td>
+            <td>2.3452</td>
+            <td>3.2423</td>
+          </tr>
+
+         </tbody>
+        </table>
+
+        </div>
+          </div>
+          
+          <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
+          <span class="float-right" style="color: #777;font-size: 15px;">2018-06-26 22:18 UTC</span>
+        
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-4">
+            <h2>Currency converter</h2>
+            <center>
+            <div class="input-group">
+
+            
+             <div class="input-group-append">
+                <input type="text" id="amount" class="form-control" style="width: 60%;padding: 1%;border-radius: 0;" name="amount">
+                <select class="form-control" id="from_currency" style="padding: 1%;border-radius: 0;">
+                   
+                </select>
+                <span class="input-group-text">&laquo; &raquo;</span>
+                <select class="form-control" id="to_currency" style="padding: 1%;border-radius: 0;">
+                   
+                </select>
+                <button id="submit" class="btn btn-primary" style="width: 50%;">&raquo;</button> 
+             </div>
+             <br>
+             
+            
+           <!--  <p><a class="btn btn-secondary" href="#" id="submit" role="button">View details &raquo;</a></p> -->
+          </div>
+        </center>
+
+          
+        </div>
+        
+       
+    </div>
+    <div class="result" id="result"  style="display: none;">
+      <div class="container">
+
+    <!-- <div class="card card-default" style="margin-top: 3%;border-radius: 9px;">
+      <div class="card-body" > -->
+        Your search: <span id="heading" style="padding: 1%;"></span>&nbsp;&nbsp;<span id="value" style="font-size: 14px;color: #777;"></span>
+     <!--  </div>
+    </div> -->
+
+    <div class="card card-default" id="results-body" style="margin-top: 3%;border-radius: 9px;">
+      <div class="card-body" style="padding: 3%;">
+        <span style="color: #777" id="middle"> equals </span>
+        <h2 id="tail">
+        </h2>
+      </div>
+
+      <div class="container">
+            <center>  <img id="chart" src="" class="img-fluid" alt=""></center>
+          </div>
+
+      <div class="card-footer">
+        <span style="cursor: pointer;" onclick='
+        if (this.parentNode.parentNode.children[1].style.display === "none") {
+            this.parentNode.parentNode.children[1].style.display = "block";
+            $("#results-body").css("min-height", "67vh");
+            $(".show").text("Show less");
+        } else {
+            this.parentNode.parentNode.children[1].style.display = "none";
+            $("#results-body").css("min-height", "40vh");
+            $(".show").text("Show more");
+        }
+        $("#chevron").toggleClass("fa-chevron-down fa-chevron-up");
+        
+        '><i class="fa fa-chevron-up" id="chevron"></i> <span class="show">Show less</span></span>
+        <a href="javascript:void(0)" onclick="$('html, body').animate({scrollTop:0}, 'slow');"><span><i class="fa fa-arrow-up float-right"></i></span></a>
+      </div>
+    </div>
+
+  </div>
+  
+             
+            </div>
+      </div> <!-- /container -->
+
+    </main>
+    
+   
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-2.0.0.min.js"></script>
+    <script src="./idb.js"></script>
+    <script src="index.js"></script>
+    <script src="idb-keyval-iife.min.js"></script>
+    
+    <script src="idb-keyval.js"></script>
+    <script src="idb-currency.js"></script>
+    <script src="js/require.js"></script>
+
+
+  <script   type="text/javascript">
+
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').then(function(reg){
+              console.log("Service Worker Registered ");
+            });
+
+          
+          }
+
+          // // const customStore = new idbKeyval.Store('offline-converter', 'offline-converter-values');
+          // const DB_NAME = 'currencies-db';
+          // const database = indexedDB.open(DB_NAME, 1);
+          // database.onupgradeneeded = function(event) {
+          //   // listen to event response
+          //   var upgradeDB = event.target.result;
+
+          //   // create an objectStore for the database
+          //   var objectStore = upgradeDB.createObjectStore("currencies");
+          // };
+         
+        
+        
+            
+        
+        fetch('https://free.currencyconverterapi.com/api/v5/currencies').then( function(response) {
+          response.json().then(function(data) {
+
+            // let currencies  
+            let currencies = data.results;
+            console.log(currencies);
+
+            for (c in currencies) {
+              let option = document.createElement('option');
+              let id = `${currencies[c].id}`;
+              let symbol = `${currencies[c].currencySymbol}`;
+              let name = `${currencies[c].currencyName}`;
+
+              option.value = `${id}`;
+              
+
+
+              option.text = `${id} - ${name}- ${symbol}`;
+              
+              document.getElementById("to_currency").appendChild(option);
+              document.getElementById("from_currency").appendChild(option.cloneNode(true));
+
+
+
+            
+              
+            }
+          })
+        });
+
+
+
+        //  $.getScript('index.js', function()
+        // {
+
+        fetch('https://free.currencyconverterapi.com/api/v5/countries').then( function(response) {
+          response.json().then(function(data) {
+
+            // let countries  
+            let countries = data.results;
+            console.log(countries);
+
+            for (c in countries) {
+              let option = document.createElement('option');
+              let id = `${countries[c].currencyId}`;
+              let symbol = `${countries[c].currencySymbol}`;
+              // let name = `${countries[c].name}`;
+              let currency = `${countries[c].currencyName}`;
+
+              option.value = `${id}`;
+
+              option.text = `${id} ${currency} - ${symbol}`;
+              
+              document.getElementById("country").appendChild(option);
+              // document.getElementById("from_currency").appendChild(option.cloneNode(true));
+             
+            // script is now loaded and executed.
+            // put your dependent JS here.
+             
+            idbKeyval.set(id, currency);
+              // alert('value at just set currency is ' + idbKeyval.get(`${id}`));
+
+            
+              
+            }
+          })
+        });
+
+
+       
+
+        
+
+        $('body').on('focus', '#amount', function(){
+            $('#result').css('display' , 'block');
+            $('html, body').animate({scrollTop:$(document).height()}, 'slow');
+        });
+
+        $('body').on('click', '#submit', function(){
+              // alert('Hi');
+              
+               let amount = $('#amount').val(); // arrival station
+            
+               let to_currency = $('#to_currency').val();
+               let from_currency = $('#from_currency').val();
+
+            
+                // from_currency = encodeURIComponent(from_currency);
+                // to_currency = encodeURIComponent(to_currency);
+                
+                let query = from_currency + '_' + to_currency;
+                let chart_query = from_currency + to_currency;
+                if (!JSON.parse('https://free.currencyconverterapi.com/api/v5/convert?q='
+                            + query + '&compact=y')) 
+                {
+                    alert('no connection');
+
+                }
+    fetch('https://free.currencyconverterapi.com/api/v5/convert?q='
+                            + query + '&compact=y').then( function(response) {
+                            response.json().then(function(data) {
+
+                
+                // let jsonObj = JSON.parse(dat;
+
+                let obj = data[query];
+                let val = '';
+
+                
+
+                for (d in obj)
+                {
+                   val = `${obj[d]}`;
+                }
+
+
+                
+                if (val) {
+                let total = val * amount;
+                  // cb(null, Math.round(total * 100) / 100);
+                  $('#heading').text(from_currency + ' ' + amount + ' to ' + to_currency);
+                  
+                  
+                  $('#value').text('1 ' + from_currency + ' = '+ val + ' ' + to_currency);
+
+                  idbKeyval.get(`${from_currency}`).then(function(val){
+                  $('#middle').text(amount + ' ' + val + ' equals');
+                  });
+
+                  idbKeyval.get(`${to_currency}`).then(function(to){
+                  $('#tail').html(total + ' ' + to);
+                  });
+                  
+
+                  
+                  console.log(amount + ' ' + total + ' ' + val);
+
+                }
+                else{
+                  console.log("Value not found for " + query);
+                }
+
+                
+                
+
+                 });
+              });
+
+                $('#chart').attr("src", 'https://www.google.com/finance/chart?q=CURRENCY:'
+                            + chart_query + '&chst=vkc&tkr=1&chsc=2&chs=270x100&p=5Y');
+                $('#chart').attr("alt", 'Chart for ' + from_currency + ' to ' + to_currency + ' conversion');
+            
+              });
+
+      let keysArray = [];
+         if (idbKeyval.keys()) {
+
+          idbKeyval.keys().then( function(keys){
+            for(k in keys)
+            {
+              // alert(`value of idbKeyval after  set is + ${keys[k]}`);
+              keysArray.push(`${keys[k]}`);
+              idbKeyval.get(`${keys[k]}`).then(function(val){
+              //let option = document.createElement('option');
+              
+             
+              
+             // option.value = `${keys[k]}`;
+
+              //option.text = `${val} - ${k}`;
+              
+              //document.getElementById("country").appendChild(option);
+              });
+            }
+          });
+          
+        }
+
+        // for offline-converter
+              idbKeyval.keys().then( function(keys){
+                for(l in keys)
+                {
+                  idbKeyval.get(`${keys[l]}`).then(function(val){
+                  
+                  for(let i = 0 ; i < keysArray.length; i++)
+                  {
+
+                     // alert(`Value of keysArray is ${keysArray[i]}`);
+
+                    if (`${keys[l]}` != `${keysArray[i]}`) 
+                    {
+                      let query = `${keys[l]}` + '_' + `${keysArray[i]}`;
+
+                       fetch('https://free.currencyconverterapi.com/api/v5/convert?q='
+                           + query + '&compact=y',{mode: 'cors'}).then( function(response) {
+                           response.json().then(function(data) {
+
+               
+                           // let jsonObj = JSON.parse(dat;
+
+                           let obj = data[query];
+                           let val = '';
+
+                           for (d in obj)
+                           {
+                              val = `${obj[d]}`;
+                           }
+
+                           if (val) {
+                            // save val in database
+                            idbcurrency.set(`${query}`, val);
+                             // cb(null, Math.round(total * 100) / 100);
+                              // alert('Yay customStore');
+                            }else{
+                             console.log("Custom db value couldn not obtained for " + query);
+                            }
+                           
+                            });
+                         }); 
+                        //
+                    }
+                  }
+                  
+                  
+                  
+                  
+                  });
+                }
+              });
+              // end of currency converter
+
+        
+    </script>
+  </body>
+</html>
